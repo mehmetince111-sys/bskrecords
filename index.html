@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BSK RECORDS — MEWARRIOR</title>
+<meta name="description" content="MEWARRIOR — KI-produzierte Musik von BSK Records. Afrobeats, Amapiano, Dance und Sommer-Sound in jeder Sprache.">
+<meta name="theme-color" content="#100D0B">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BSK Records">
+<meta property="og:title" content="BSK RECORDS — MEWARRIOR">
+<meta property="og:description" content="MEWARRIOR — KI-produzierte Musik von BSK Records. Afrobeats, Amapiano, Dance und Sommer-Sound in jeder Sprache.">
+<meta property="og:url" content="https://bskrecords.com/">
+<link rel="canonical" href="https://bskrecords.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    /* light is the base; dark redefined below */
+    --bg:#F6EFE4; --bg-2:#FFFFFF; --bg-3:#F0E7D6;
+    --line:#E4D7C2; --line-2:#D3C3A8;
+    --ink:#211A13; --ink-dim:#5B4E40; --ink-faint:#8C7D6A;
+    --ember:#E23A1B; --amber:#DE8214; --magenta:#DB1E6C;
+    --glow:rgba(226,90,30,.28);
+    --grain:.045;
+    --heat: linear-gradient(102deg,#E23A1B 0%,#DE8214 62%,#E29A2A 100%);
+    --heat-soft: linear-gradient(102deg,rgba(226,58,27,.16),rgba(222,130,20,.14));
+    --shadow: 0 18px 50px -24px rgba(80,30,10,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#100D0B; --bg-2:#191411; --bg-3:#221A15;
+      --line:#352C25; --line-2:#48392F;
+      --ink:#F4ECE0; --ink-dim:#B7A897; --ink-faint:#7B6F63;
+      --ember:#FF4B2B; --amber:#FFAE3D; --magenta:#FF2E86;
+      --glow:rgba(255,120,50,.5);
+      --grain:.06;
+      --heat: linear-gradient(102deg,#FF4B2B 0%,#FFAE3D 66%,#FFCB6B 100%);
+      --heat-soft: linear-gradient(102deg,rgba(255,75,43,.22),rgba(255,174,61,.18));
+      --shadow: 0 24px 60px -26px rgba(0,0,0,.75);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#F6EFE4; --bg-2:#FFFFFF; --bg-3:#F0E7D6;
+    --line:#E4D7C2; --line-2:#D3C3A8;
+    --ink:#211A13; --ink-dim:#5B4E40; --ink-faint:#8C7D6A;
+    --ember:#E23A1B; --amber:#DE8214; --magenta:#DB1E6C;
+    --glow:rgba(226,90,30,.28); --grain:.045;
+    --heat: linear-gradient(102deg,#E23A1B 0%,#DE8214 62%,#E29A2A 100%);
+    --heat-soft: linear-gradient(102deg,rgba(226,58,27,.16),rgba(222,130,20,.14));
+    --shadow: 0 18px 50px -24px rgba(80,30,10,.45);
+  }
+  :root[data-theme="dark"]{
+    --bg:#100D0B; --bg-2:#191411; --bg-3:#221A15;
+    --line:#352C25; --line-2:#48392F;
+    --ink:#F4ECE0; --ink-dim:#B7A897; --ink-faint:#7B6F63;
+    --ember:#FF4B2B; --amber:#FFAE3D; --magenta:#FF2E86;
+    --glow:rgba(255,120,50,.5); --grain:.06;
+    --heat: linear-gradient(102deg,#FF4B2B 0%,#FFAE3D 66%,#FFCB6B 100%);
+    --heat-soft: linear-gradient(102deg,rgba(255,75,43,.22),rgba(255,174,61,.18));
+    --shadow: 0 24px 60px -26px rgba(0,0,0,.75);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Helvetica Neue",-apple-system,"Segoe UI",Arial,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,56px)}
+  .mono{font-family:ui-monospace,"SF Mono","Cascadia Code","Segoe UI Mono",Consolas,monospace}
+
+  /* film grain overlay */
+  .grain{
+    position:fixed; inset:0; z-index:60; pointer-events:none; opacity:var(--grain);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;
+  }
+
+  /* top bar */
+  header.bar{
+    position:sticky; top:0; z-index:50; backdrop-filter:blur(11px);
+    background:color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom:1px solid var(--line);
+  }
+  .bar-in{display:flex; align-items:center; justify-content:space-between; height:64px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.14em; font-size:.82rem}
+  .brand .tri{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid transparent;
+    border-bottom-color:var(--ember)}
+  .brand .rec{color:var(--ink-faint)}
+  nav.links{display:flex; gap:26px; align-items:center}
+  nav.links a{color:var(--ink-dim); text-decoration:none; font-size:.9rem; font-weight:500; letter-spacing:.01em; transition:color .2s}
+  nav.links a:hover{color:var(--ink)}
+  .toggle{background:transparent; border:1px solid var(--line-2); color:var(--ink-dim); width:34px;height:34px;border-radius:9px;cursor:pointer; display:grid;place-items:center; transition:.2s}
+  .toggle:hover{color:var(--ink); border-color:var(--ember)}
+  @media(max-width:720px){ nav.links a:not(.cta-mini){display:none} }
+
+  /* hero */
+  .hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line)}
+  .hero canvas{position:absolute; inset:0; width:100%; height:100%; z-index:0}
+  .hero .veil{position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:radial-gradient(120% 90% at 82% 8%, var(--glow), transparent 55%);}
+  .hero-in{position:relative; z-index:2; padding:clamp(64px,13vh,140px) 0 clamp(56px,10vh,110px)}
+  .eyebrow{font-family:ui-monospace,Consolas,monospace; font-size:.76rem; letter-spacing:.34em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 22px}
+  .eyebrow b{color:var(--amber); font-weight:600}
+  .wordmark{
+    font-weight:900; line-height:.86; letter-spacing:-.035em; margin:0;
+    font-size:clamp(3.6rem,15vw,11.5rem); text-transform:uppercase;
+    animation:rise .9s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .wordmark .me{color:var(--ink); -webkit-text-fill-color:var(--ink)}
+  .wordmark .war{
+    background:var(--heat); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+    filter:drop-shadow(0 6px 26px var(--glow));
+  }
+  .tagline{margin:26px 0 0; max-width:33ch; font-size:clamp(1.15rem,2.4vw,1.6rem); font-weight:700; letter-spacing:-.01em}
+  .lede{margin:16px 0 0; max-width:52ch; color:var(--ink-dim); font-size:1.06rem}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
+  .btn{display:inline-flex; align-items:center; gap:10px; font-weight:700; font-size:.98rem; text-decoration:none; padding:13px 22px; border-radius:12px; cursor:pointer; border:1px solid transparent; transition:transform .18s ease, box-shadow .2s ease, background .2s}
+  .btn-primary{background:var(--heat); color:#1a0f06; box-shadow:0 12px 30px -12px var(--glow)}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--ember); color:var(--ink)}
+  .btn .play{width:0;height:0;border-left:11px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent}
+
+  /* section scaffolding */
+  section{padding:clamp(66px,11vh,120px) 0}
+  .sec-head{display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:38px}
+  .sec-head h2{font-size:clamp(1.7rem,4vw,2.7rem); font-weight:800; letter-spacing:-.02em; margin:0; text-wrap:balance}
+  .sec-head .kick{font-family:ui-monospace,Consolas,monospace; font-size:.74rem; letter-spacing:.28em; text-transform:uppercase; color:var(--ember)}
+  .sec-head p{margin:6px 0 0; color:var(--ink-dim); max-width:44ch}
+
+  /* catalog list */
+  .cat{border-top:1px solid var(--line)}
+  .rel{display:grid; grid-template-columns:auto 1fr auto; gap:22px; align-items:center;
+    padding:22px 14px; border-bottom:1px solid var(--line); position:relative; transition:background .22s}
+  .rel:hover{background:var(--bg-2)}
+  .rel .num{font-family:ui-monospace,Consolas,monospace; font-size:.86rem; color:var(--ink-faint); letter-spacing:.06em}
+  .rel .mid .t{font-size:1.32rem; font-weight:800; letter-spacing:-.01em}
+  .rel .mid .t em{font-style:normal; color:var(--ink-dim); font-weight:600; font-size:.9rem; margin-left:8px}
+  .rel .mid .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:9px}
+  .tag{font-family:ui-monospace,Consolas,monospace; font-size:.7rem; letter-spacing:.05em; color:var(--ink-dim);
+    border:1px solid var(--line-2); border-radius:99px; padding:3px 10px}
+  .tag.hot{color:#1a0f06; background:var(--heat); border-color:transparent; font-weight:700}
+  .rel .act{display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink);
+    border:1px solid var(--line-2); border-radius:11px; padding:9px 16px; font-weight:700; font-size:.9rem; white-space:nowrap; transition:.2s}
+  .rel .act:hover{border-color:var(--ember); background:var(--heat-soft)}
+  .rel .act .play{width:0;height:0;border-left:9px solid var(--ember);border-top:6px solid transparent;border-bottom:6px solid transparent}
+  .cat-note{margin:20px 4px 0; color:var(--ink-faint); font-size:.9rem}
+  @media(max-width:640px){
+    .rel{grid-template-columns:1fr auto; gap:6px 16px}
+    .rel .num{grid-column:1/-1}
+  }
+
+  /* about + process */
+  .about{display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(28px,5vw,64px); align-items:start}
+  .about p{color:var(--ink-dim); font-size:1.08rem}
+  .about p strong{color:var(--ink)}
+  .ki-card{background:var(--bg-2); border:1px solid var(--line); border-radius:18px; padding:30px; box-shadow:var(--shadow)}
+  .ki-card .badge{display:inline-flex; align-items:center; gap:9px; font-family:ui-monospace,Consolas,monospace; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--amber); margin-bottom:16px}
+  .ki-card .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--heat)}
+  .ki-card h3{margin:0 0 12px; font-size:1.3rem; letter-spacing:-.01em}
+  .ki-card p{margin:0; font-size:1rem; color:var(--ink-dim)}
+  .steps{margin:38px 0 0; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; border-top:1px solid var(--line); padding-top:30px}
+  .step .n{font-family:ui-monospace,Consolas,monospace; color:var(--ember); font-size:.82rem; letter-spacing:.1em}
+  .step h4{margin:8px 0 4px; font-size:1.02rem}
+  .step p{margin:0; font-size:.9rem; color:var(--ink-faint)}
+  @media(max-width:820px){ .about{grid-template-columns:1fr} .steps{grid-template-columns:repeat(2,1fr)} }
+
+  /* videos */
+  .vids{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .vid{position:relative; aspect-ratio:16/9; border-radius:15px; overflow:hidden; border:1px solid var(--line);
+    background:linear-gradient(150deg,var(--bg-3),var(--bg-2)); display:flex; flex-direction:column; justify-content:flex-end; padding:18px}
+  .vid::before{content:""; position:absolute; inset:0; background:var(--heat-soft); opacity:.5}
+  .vid .pl{position:absolute; top:16px; left:16px; width:40px;height:40px;border-radius:50%; border:1.5px solid var(--line-2); display:grid;place-items:center}
+  .vid .pl i{width:0;height:0;border-left:11px solid var(--ember);border-top:7px solid transparent;border-bottom:7px solid transparent; margin-left:2px}
+  .vid .vt{position:relative; font-weight:800; font-size:1.05rem}
+  .vid .vs{position:relative; font-family:ui-monospace,Consolas,monospace; font-size:.72rem; letter-spacing:.06em; color:var(--ink-faint); margin-top:4px}
+  @media(max-width:760px){ .vids{grid-template-columns:1fr} }
+
+  /* contact */
+  .contact{background:var(--bg-2); border:1px solid var(--line); border-radius:20px; padding:clamp(30px,5vw,56px); text-align:center; box-shadow:var(--shadow)}
+  .contact h2{font-size:clamp(1.6rem,4vw,2.4rem); margin:0 0 10px; letter-spacing:-.02em}
+  .contact p{color:var(--ink-dim); margin:0 auto 24px; max-width:46ch}
+  .mailbtn{font-family:ui-monospace,Consolas,monospace; font-size:1.05rem; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--ember); padding-bottom:3px}
+  .mailbtn:hover{color:var(--amber)}
+
+  /* footer + legal */
+  footer{border-top:1px solid var(--line); padding:46px 0 60px; color:var(--ink-faint); font-size:.86rem}
+  .foot-top{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
+  .foot-links{display:flex; gap:22px}
+  .foot-links a{color:var(--ink-dim); text-decoration:none}
+  .foot-links a:hover{color:var(--ember)}
+  .legal{margin-top:40px; padding-top:26px; border-top:1px dashed var(--line-2); display:grid; grid-template-columns:1fr 1fr; gap:34px}
+  .legal h3{font-size:.82rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-dim); margin:0 0 10px}
+  .legal p{margin:0; font-size:.82rem; line-height:1.7}
+  .legal .todo{color:var(--amber)}
+  @media(max-width:680px){ .legal{grid-template-columns:1fr} }
+
+  @keyframes rise{from{opacity:0; transform:translateY(22px)} to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <div class="brand"><span class="tri"></span> BSK <span class="rec">RECORDS</span></div>
+    <nav class="links">
+      <a href="#katalog">Katalog</a>
+      <a href="#ueber">Über</a>
+      <a href="#videos">Videos</a>
+      <a href="#kontakt">Kontakt</a>
+      <button class="toggle" id="themeBtn" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">◐</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow">BSK Records · <b>Independent Label</b> · Germany</p>
+    <h1 class="wordmark"><span class="me">ME</span><span class="war">WARRIOR</span></h1>
+    <p class="tagline">Musik ohne Grenzen.</p>
+    <p class="lede">KI‑produzierte Tracks in jeder Sprache — Afrobeats, Amapiano, Dance und Sommer‑Sound. Jede Stimme trainiert, jeder Beat im eigenen Studio gebaut.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#katalog"><span class="play"></span> Neueste Single: „Sommer"</a>
+      <a class="btn btn-ghost" href="#ueber">Über das Projekt</a>
+    </div>
+  </div>
+</section>
+
+<section id="katalog" class="wrap">
+  <div class="sec-head">
+    <div>
+      <div class="kick">Discography</div>
+      <h2>Katalog</h2>
+    </div>
+    <p>Alle Veröffentlichungen erscheinen unter BSK Records — KI‑produziert und gekennzeichnet.</p>
+  </div>
+  <div class="cat">
+    <div class="rel">
+      <div class="num">BSK‑001</div>
+      <div class="mid">
+        <div class="t">Sommer <em>· Club Mix</em></div>
+        <div class="tags"><span class="tag hot">Neu</span><span class="tag">Afro‑Dance</span><span class="tag">Deutsch</span><span class="tag">2026</span></div>
+      </div>
+      <a class="act" href="#kontakt" data-stream><span class="play"></span> Stream</a>
+    </div>
+    <div class="rel">
+      <div class="num">BSK‑002</div>
+      <div class="mid">
+        <div class="t">Fame</div>
+        <div class="tags"><span class="tag">Hip‑Hop / Pop</span><span class="tag">Deutsch</span><span class="tag">2026</span></div>
+      </div>
+      <a class="act" href="#kontakt" data-stream><span class="play"></span> Stream</a>
+    </div>
+    <div class="rel">
+      <div class="num">BSK‑003</div>
+      <div class="mid">
+        <div class="t">Almanya</div>
+        <div class="tags"><span class="tag">Türkçe‑Pop</span><span class="tag">Türkisch</span><span class="tag">2026</span></div>
+      </div>
+      <a class="act" href="#kontakt" data-stream><span class="play"></span> Stream</a>
+    </div>
+  </div>
+  <p class="cat-note">Weitere Releases in Produktion. Streaming‑Links werden ergänzt, sobald die Distribution live ist.</p>
+</section>
+
+<section id="ueber" style="background:var(--bg-2); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kick">Das Projekt</div>
+        <h2>Über MEWARRIOR</h2>
+      </div>
+    </div>
+    <div class="about">
+      <div>
+        <p><strong>MEWARRIOR ist das KI‑Musikprojekt von BSK Records.</strong> Aus einer trainierten Gesangsstimme und modernen KI‑Modellen entstehen Songs in jeder Sprache — vom ersten Beat bis zum fertigen Master, alles im eigenen Studio.</p>
+        <p>Der Sound zieht sich vom warmen Sommer‑Amapiano über Dance bis Hip‑Hop. Keine Grenzen bei Sprache, Genre oder Tempo — nur der eigene Katalog, konsequent unter einem Dach.</p>
+      </div>
+      <div class="ki-card">
+        <div class="badge"><span class="dot"></span> KI‑gekennzeichnet</div>
+        <h3>Transparent gemacht.</h3>
+        <p>Wir stehen dazu: Jeder Track ist KI‑generiert. Text, Stimme, Beat und Video entstehen im Haus, jede Veröffentlichung wird als KI‑Musik gekennzeichnet — und alle Rechte liegen bei BSK Records.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h4>Text</h4><p>Songwriting & Sprache im Haus.</p></div>
+      <div class="step"><div class="n">02</div><h4>Stimme</h4><p>Eigens trainiertes Vocal‑Modell.</p></div>
+      <div class="step"><div class="n">03</div><h4>Produktion</h4><p>Beat, Arrangement, Mix.</p></div>
+      <div class="step"><div class="n">04</div><h4>Master & Video</h4><p>Finaler Master + Musikvideo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="wrap">
+  <div class="sec-head">
+    <div>
+      <div class="kick">Visuals</div>
+      <h2>Musikvideos</h2>
+    </div>
+    <p>Produziert im eigenen Render‑Studio. Die ersten Clips folgen in Kürze.</p>
+  </div>
+  <div class="vids">
+    <div class="vid"><span class="pl"><i></i></span><div class="vt">Sommer</div><div class="vs">MV · in Arbeit</div></div>
+    <div class="vid"><span class="pl"><i></i></span><div class="vt">Fame</div><div class="vs">MV · in Arbeit</div></div>
+    <div class="vid"><span class="pl"><i></i></span><div class="vt">Almanya</div><div class="vs">MV · in Arbeit</div></div>
+  </div>
+</section>
+
+<section id="kontakt" class="wrap">
+  <div class="contact">
+    <h2>Booking & Kontakt</h2>
+    <p>Für Anfragen, Kooperationen und Presse. Antwort meist innerhalb weniger Tage.</p>
+    <a class="mailbtn" href="mailto:kontakt@bskrecords.com">kontakt@bskrecords.com</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot-top">
+    <div class="brand"><span class="tri"></span> BSK <span class="rec">RECORDS</span></div>
+    <div class="foot-links">
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </div>
+  </div>
+  <div class="legal">
+    <div id="impressum">
+      <h3>Impressum</h3>
+      <p>Angaben gemäß § 5 TMG<br>
+      <span class="todo">[Name / Verantwortlich]</span><br>
+      <span class="todo">[Straße, PLZ Ort]</span><br>
+      Kontakt: kontakt@bskrecords.com<br>
+      <em>Entwurf — vor Veröffentlichung vervollständigen.</em></p>
+    </div>
+    <div id="datenschutz">
+      <h3>Datenschutz</h3>
+      <p>Diese Website wird statisch über GitHub Pages ausgeliefert und setzt keine eigenen Tracking‑Cookies. Server‑seitige Zugriffs‑Logs des Hosters können anfallen.<br>
+      <span class="todo">Vollständige Datenschutzerklärung (DSGVO) folgt.</span></p>
+    </div>
+  </div>
+  <p style="margin-top:30px; color:var(--ink-faint)">© 2026 BSK Records — MEWARRIOR · KI‑generierte Musik.</p>
+</footer>
+
+<script>
+(function(){
+  /* theme toggle — cooperates with the viewer's own data-theme stamping */
+  var btn = document.getElementById('themeBtn');
+  btn.addEventListener('click', function(){
+    var root = document.documentElement;
+    var cur = root.getAttribute('data-theme');
+    if(!cur){ // infer from OS
+      cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ember hero — subtle rising sparks, forge feel; respects reduced motion */
+  var canvas = document.getElementById('embers');
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,parts=[],DPR=Math.min(window.devicePixelRatio||1,2);
+  function col(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function size(){
+    var r = canvas.getBoundingClientRect();
+    W=r.width; H=r.height;
+    canvas.width=W*DPR; canvas.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  function seed(){
+    parts=[];
+    var n = Math.round(Math.min(52, W/26));
+    for(var i=0;i<n;i++) parts.push(mk(true));
+  }
+  function mk(init){
+    return {
+      x: Math.random()*W,
+      y: init ? Math.random()*H : H+8,
+      r: 0.6+Math.random()*1.9,
+      vy: 0.15+Math.random()*0.6,
+      vx: (Math.random()-0.5)*0.25,
+      a: 0.25+Math.random()*0.55,
+      hue: Math.random()<0.5 ? col('--ember') : col('--amber'),
+      tw: Math.random()*6.28
+    };
+  }
+  function draw(anim){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<parts.length;i++){
+      var p=parts[i];
+      if(anim){
+        p.y-=p.vy; p.x+=p.vx; p.tw+=0.05;
+        if(p.y< -10){ parts[i]=mk(false); continue; }
+      }
+      var fl = anim ? (0.7+0.3*Math.sin(p.tw)) : 1;
+      ctx.globalAlpha = p.a*fl;
+      ctx.fillStyle = p.hue;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.28); ctx.fill();
+      ctx.globalAlpha = p.a*fl*0.35;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*3.2,0,6.28); ctx.fill();
+    }
+    ctx.globalAlpha=1;
+  }
+  function loop(){ draw(true); requestAnimationFrame(loop); }
+  function boot(){ size(); seed(); if(reduce){ draw(false); } else { loop(); } }
+  window.addEventListener('resize', function(){ size(); seed(); if(reduce) draw(false); });
+  boot();
+})();
+</script>
+</body>
+</html>
