@@ -159,6 +159,10 @@
   .rel .act:hover{border-color:var(--ember); background:var(--heat-soft)}
   .rel .act .play{width:0;height:0;border-left:9px solid var(--ember);border-top:6px solid transparent;border-bottom:6px solid transparent}
   .cat-note{margin:20px 4px 0; color:var(--ink-faint); font-size:.9rem}
+  /* Ohne diese Regel malt der Browser die Links im Fliesstext in seinem
+     Standardblau — das bricht den warmen Farbklang der Seite auf. */
+  .cat-note a{color:var(--ink-dim); text-decoration:none; border-bottom:1px solid var(--ember); padding-bottom:1px; transition:color .2s}
+  .cat-note a:hover{color:var(--amber)}
   @media(max-width:640px){
     .rel{grid-template-columns:1fr auto; gap:6px 16px}
     .rel .num{grid-column:1/-1}
@@ -241,8 +245,8 @@
     <p class="tagline">Musik ohne Grenzen.</p>
     <p class="lede">KI‑produzierte Tracks in jeder Sprache — Afrobeats, Amapiano, Dance und Sommer‑Sound. Jede Stimme trainiert, jeder Beat im eigenen Studio gebaut.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://open.spotify.com/album/6rfXBe1u5QSm1XEAZNuiY0" target="_blank" rel="noopener"><span class="play"></span> „Sommer" — jetzt auf Spotify</a>
-      <a class="btn btn-ghost" href="#ueber">Über das Projekt</a>
+      <a class="btn btn-primary" href="https://open.spotify.com/album/6PgT9kxm1Gwxe1GeXmiqmM" target="_blank" rel="noopener"><span class="play"></span> „Palmen im Block" — jetzt auf Spotify</a>
+      <a class="btn btn-ghost" href="https://youtu.be/QaI8YT5xvXw" target="_blank" rel="noopener">Video ansehen</a>
     </div>
   </div>
 </section>
@@ -266,18 +270,34 @@
     .featured .ai{margin:9px 0 0; font-size:.58rem; letter-spacing:.05em; color:var(--ink-faint); opacity:.5}
   </style>
   <div class="featured">
-    <img src="images/almanya-babo-cover.jpg" alt="MEWARRIOR — Almanya Babo">
+    <img src="images/palmen-im-block-cover.jpg" alt="MEWARRIOR — Palmen im Block">
     <div class="fb">
-      <div class="fe">Neue Single · OUT NOW</div>
-      <h3>MEWARRIOR — Almanya Babo</h3>
-      <p class="meta">Deutschrap · Deutsch · 2026 · BSK Records</p>
-      <audio controls preload="none" src="music/mewarrior-almanya-babo-preview.mp3"></audio>
+      <div class="fe">Neueste Single · OUT NOW</div>
+      <h3>MEWARRIOR — Palmen im Block</h3>
+      <p class="meta">West Coast · Deutsch · 2026 · BSK Records</p>
+      <audio controls preload="none" src="music/mewarrior-palmen-im-block-preview.mp3"></audio>
       <p style="margin:14px 0 2px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://open.spotify.com/album/6PgT9kxm1Gwxe1GeXmiqmM" target="_blank" rel="noopener"><span class="play"></span> Spotify</a>
+        <a class="btn btn-primary" href="https://music.apple.com/de/album/palmen-im-block-single/6799755300" target="_blank" rel="noopener"><span class="play"></span> Apple Music</a>
+        <a class="btn btn-ghost" href="https://youtu.be/QaI8YT5xvXw" target="_blank" rel="noopener">Offizielles Video</a>
+        <a class="btn btn-ghost" href="https://distrokid.com/hyperfollow/mewarrior/palmen-im-block" target="_blank" rel="noopener">alle Dienste</a>
+      </p>
+      <p class="ai">Hörprobe · voller Song auf Spotify, Apple Music &amp; überall · KI‑produziert · AI‑generated</p>
+    </div>
+  </div>
+
+  <div class="featured" style="padding:16px">
+    <img src="images/almanya-babo-cover.jpg" alt="MEWARRIOR — Almanya Babo" style="width:120px; height:120px">
+    <div class="fb">
+      <div class="fe">OUT NOW</div>
+      <h3 style="font-size:1.25rem">MEWARRIOR — Almanya Babo</h3>
+      <p class="meta" style="margin-bottom:10px">Deutschrap · Deutsch · 2026 · BSK Records</p>
+      <p style="margin:0; display:flex; gap:10px; flex-wrap:wrap">
         <a class="btn btn-primary" href="https://open.spotify.com/album/0WXfZYtwancsFXIFRFZU96" target="_blank" rel="noopener"><span class="play"></span> Spotify</a>
         <a class="btn btn-primary" href="https://music.apple.com/de/album/almanya-babo-single/6798813458" target="_blank" rel="noopener"><span class="play"></span> Apple Music</a>
+        <a class="btn btn-ghost" href="https://youtu.be/N9Izufq4Lm0" target="_blank" rel="noopener">Video</a>
         <a class="btn btn-ghost" href="https://distrokid.com/hyperfollow/mewarrior/almanya-babo" target="_blank" rel="noopener">alle Dienste</a>
       </p>
-      <p class="ai">Hörprobe · voller Song jetzt live auf Spotify, Apple Music &amp; überall · KI‑produziert · AI‑generated</p>
     </div>
   </div>
 
@@ -290,6 +310,7 @@
       <p style="margin:0; display:flex; gap:10px; flex-wrap:wrap">
         <a class="btn btn-primary" href="https://open.spotify.com/album/6rfXBe1u5QSm1XEAZNuiY0" target="_blank" rel="noopener"><span class="play"></span> Spotify</a>
         <a class="btn btn-primary" href="https://music.apple.com/de/album/sommer-single/6798759144" target="_blank" rel="noopener"><span class="play"></span> Apple Music</a>
+        <a class="btn btn-ghost" href="https://youtu.be/6JLW5-9H8E4" target="_blank" rel="noopener">Video</a>
         <a class="btn btn-ghost" href="https://distrokid.com/hyperfollow/mewarrior/sommer" target="_blank" rel="noopener">alle Dienste</a>
       </p>
     </div>
@@ -321,7 +342,7 @@
       <a class="act" href="https://open.spotify.com/album/6PgT9kxm1Gwxe1GeXmiqmM" target="_blank" rel="noopener" data-stream><span class="play"></span> Stream</a>
     </div>
   </div>
-  <p class="cat-note">„Sommer“, „Almanya Babo“ und „Palmen im Block“ sind live — auf Spotify, Apple Music und überall wo es Musik gibt. Das offizielle Video zu „Palmen im Block“ läuft auf <a href="https://youtu.be/QaI8YT5xvXw" target="_blank" rel="noopener">YouTube</a>. Weitere Releases in Produktion.</p>
+  <p class="cat-note">„Sommer“, „Almanya Babo“ und „Palmen im Block“ sind live — auf Spotify, Apple Music und überall wo es Musik gibt. Zu allen drei gibt es ein offizielles <a href="#videos">Musikvideo</a>. Weitere Releases in Produktion.</p>
 </section>
 
 <section id="ueber" style="background:var(--bg-2); border-block:1px solid var(--line)">
@@ -358,11 +379,48 @@
       <div class="kick">Visuals</div>
       <h2>Musikvideos</h2>
     </div>
-    <p>Produziert im eigenen Render‑Studio. Die ersten Clips folgen in Kürze.</p>
+    <p>Produziert im eigenen Render‑Studio. Alle drei Singles haben ein offizielles Video.</p>
   </div>
+  <style>
+    /* ⚠️ Vorschaubilder liegen LOKAL unter images/. Die Alternative waere
+       gewesen, sie direkt von i.ytimg.com einzubinden — dann kontaktiert
+       aber jeder Seitenaufruf Google, bevor jemand ueberhaupt auf ein Video
+       geklickt hat. Auf einer deutschen Seite mit Datenschutzerklaerung
+       ist das heikel. So entsteht der erste Google-Kontakt erst beim Klick. */
+    .vid{padding:0; text-decoration:none; color:inherit; display:block}
+    .vid img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+    .vid .shade{position:absolute; inset:0; z-index:1;
+      background:linear-gradient(to top, rgba(10,6,4,.88) 0%, rgba(10,6,4,.35) 45%, rgba(10,6,4,.08) 100%)}
+    .vid .cap{position:absolute; left:0; right:0; bottom:0; z-index:2; padding:18px}
+    /* display:block noetig — als span waeren sie inline und das margin-top
+       aus der Grundregel .vid .vs bliebe wirkungslos. */
+    .vid .vt{display:block; color:#F4ECE0; text-shadow:0 2px 12px rgba(0,0,0,.7)}
+    .vid .vs{display:block; color:#C9BBAB}
+    .vid .pl{z-index:2; background:rgba(16,10,8,.55); backdrop-filter:blur(4px); transition:.2s}
+    .vid:hover .pl{background:var(--heat); border-color:transparent}
+    .vid:hover .pl i{border-left-color:#1a0f06}
+    .vid::before{display:none}
+    .vid{transition:transform .2s ease, border-color .2s ease}
+    .vid:hover{transform:translateY(-3px); border-color:var(--ember)}
+  </style>
   <div class="vids">
-    <div class="vid"><span class="pl"><i></i></span><div class="vt">Sommer</div><div class="vs">MV · in Arbeit</div></div>
+    <a class="vid" href="https://youtu.be/QaI8YT5xvXw" target="_blank" rel="noopener">
+      <img src="images/video-palmen.jpg" alt="" loading="lazy">
+      <span class="shade"></span><span class="pl"><i></i></span>
+      <span class="cap"><span class="vt">Palmen im Block</span><span class="vs">Official Video · 2026</span></span>
+    </a>
+    <a class="vid" href="https://youtu.be/N9Izufq4Lm0" target="_blank" rel="noopener">
+      <img src="images/video-almanya.jpg" alt="" loading="lazy">
+      <span class="shade"></span><span class="pl"><i></i></span>
+      <span class="cap"><span class="vt">Almanya Babo</span><span class="vs">Official Video · 2026</span></span>
+    </a>
+    <a class="vid" href="https://youtu.be/6JLW5-9H8E4" target="_blank" rel="noopener">
+      <img src="images/video-sommer.jpg" alt="" loading="lazy">
+      <span class="shade"></span><span class="pl"><i></i></span>
+      <span class="cap"><span class="vt">Sommer</span><span class="vs">Official Video · 2026</span></span>
+    </a>
   </div>
+  <p class="cat-note">Alle Videos auf dem <a href="https://www.youtube.com/@mewarriormusic" target="_blank" rel="noopener">YouTube‑Kanal</a>.</p>
 </section>
 
 <section id="kontakt" class="wrap">
@@ -370,6 +428,28 @@
     <h2>Booking & Kontakt</h2>
     <p>Für Anfragen, Kooperationen und Presse. Antwort meist innerhalb weniger Tage.</p>
     <a class="mailbtn" href="mailto:bskrecords1@gmail.com">bskrecords1@gmail.com</a>
+    <style>
+      .social{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:30px}
+      .social a{display:inline-flex; align-items:center; gap:9px; text-decoration:none;
+        color:var(--ink); border:1px solid var(--line-2); border-radius:11px;
+        padding:10px 18px; font-weight:700; font-size:.9rem; transition:.2s}
+      .social a:hover{border-color:var(--ember); background:var(--heat-soft); transform:translateY(-2px)}
+      .social svg{width:17px; height:17px; fill:currentColor; flex:none}
+    </style>
+    <div class="social">
+      <a href="https://www.youtube.com/@mewarriormusic" target="_blank" rel="noopener" aria-label="MEWARRIOR auf YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        YouTube</a>
+      <a href="https://www.instagram.com/mewarriormusic/" target="_blank" rel="noopener" aria-label="MEWARRIOR auf Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.55 1.55 0 1 1-1.55-1.55A1.55 1.55 0 0 1 18.9 5.2z"/></svg>
+        Instagram</a>
+      <a href="https://www.tiktok.com/@mewarriormusic" target="_blank" rel="noopener" aria-label="MEWARRIOR auf TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8a4.8 4.8 0 0 1-1.2-3.1h-3.3v13.2a2.8 2.8 0 1 1-2-2.7V9.8a6 6 0 1 0 5.3 6V9.1a8 8 0 0 0 4.7 1.5V7.3a4.8 4.8 0 0 1-3.5-1.5z"/></svg>
+        TikTok</a>
+      <a href="https://open.spotify.com/album/6PgT9kxm1Gwxe1GeXmiqmM" target="_blank" rel="noopener" aria-label="MEWARRIOR auf Spotify">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.4-2.1-10.5-1.15a.75.75 0 1 1-.33-1.46c4.5-1 8.4-.56 11.6 1.36a.75.75 0 0 1 .25 1zm1.5-3.3a.94.94 0 0 1-1.3.3c-3.2-2-8.1-2.55-11.9-1.4a.94.94 0 1 1-.55-1.8c4.35-1.3 9.75-.7 13.4 1.6a.94.94 0 0 1 .3 1.3zm.13-3.44C15.3 8.3 8.9 8.1 5.2 9.2a1.12 1.12 0 1 1-.65-2.15C8.8 5.8 15.9 6.05 20.1 8.5a1.12 1.12 0 1 1-1.14 1.94z"/></svg>
+        Spotify</a>
+    </div>
   </div>
 </section>
 
