@@ -5,41 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Impressum — BSK Records</title>
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#100D0B">
+<meta name="theme-color" content="#0E0B09">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://bskrecords.com/impressum.html">
 <meta name="description" content="Impressum von bskrecords.com – BSK Records / MEWARRIOR, Mehmet Ince, Mannheim. Angaben gemäß § 5 DDG.">
+<script>(function(){try{var t=localStorage.getItem('bsk-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <style>
-  :root{--bg:#F6EFE4;--bg2:#fff;--ink:#211A13;--dim:#5B4E40;--line:#E4D7C2;--ember:#E23A1B;--amber:#DE8214}
-  @media(prefers-color-scheme:dark){:root{--bg:#100D0B;--bg2:#191411;--ink:#F4ECE0;--dim:#B7A897;--line:#352C25;--ember:#FF4B2B;--amber:#FFAE3D}}
-  :root[data-theme="light"]{--bg:#F6EFE4;--bg2:#fff;--ink:#211A13;--dim:#5B4E40;--line:#E4D7C2;--ember:#E23A1B;--amber:#DE8214}
-  :root[data-theme="dark"]{--bg:#100D0B;--bg2:#191411;--ink:#F4ECE0;--dim:#B7A897;--line:#352C25;--ember:#FF4B2B;--amber:#FFAE3D}
+  @font-face{font-family:"Inter";src:url("fonts/inter-400.woff2") format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Inter";src:url("fonts/inter-700.woff2") format("woff2");font-weight:700;font-display:swap}
+  @font-face{font-family:"Anton";src:url("fonts/anton.woff2") format("woff2");font-weight:400;font-display:swap}
+  :root{--bg:#F7F1E7;--bg2:#FFFDF9;--ink:#1E1711;--dim:#5A4D40;--line:#E3D6C1;--ember:#B82C10;--amber:#DE8214;--glow:rgba(226,90,30,.26)}
+  @media(prefers-color-scheme:dark){:root{--bg:#0E0B09;--bg2:#171210;--ink:#F5EDE1;--dim:#B9AA98;--line:#2F261F;--ember:#FF6A45;--amber:#FFAE3D;--glow:rgba(255,120,50,.45)}}
+  :root[data-theme="light"]{--bg:#F7F1E7;--bg2:#FFFDF9;--ink:#1E1711;--dim:#5A4D40;--line:#E3D6C1;--ember:#B82C10;--amber:#DE8214;--glow:rgba(226,90,30,.26)}
+  :root[data-theme="dark"]{--bg:#0E0B09;--bg2:#171210;--ink:#F5EDE1;--dim:#B9AA98;--line:#2F261F;--ember:#FF6A45;--amber:#FFAE3D;--glow:rgba(255,120,50,.45)}
   *{box-sizing:border-box}
-  :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65;font-size:16px}
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  header{border-bottom:1px solid var(--line);padding:16px 0}
-  .brand{font-weight:800;letter-spacing:.14em;font-size:.8rem;text-decoration:none;color:var(--ink)}
-  .brand b{color:var(--ember)} .brand span{color:var(--dim)}
-  main{padding:40px 0 10px}
-  h1{font-size:2rem;letter-spacing:-.02em;margin:0 0 6px}
-  h2{font-size:1.1rem;margin:2em 0 .4em}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  header img{height:40px;width:auto;display:block;filter:drop-shadow(0 2px 10px var(--glow))}
+  header a.back{color:var(--dim);text-decoration:none;font-size:.9rem;font-weight:700}
+  header a.back:hover{color:var(--ink)}
+  main{padding:clamp(40px,7vh,72px) 0 10px}
+  .kick{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ember);font-weight:700}
+  h1{font-family:"Anton",Impact,"Arial Narrow Bold",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(2.4rem,6vw,3.6rem);line-height:.95;margin:8px 0 10px}
+  h2{font-size:1.15rem;margin:2.2em 0 .5em;letter-spacing:-.01em}
+  p{margin:.4em 0 .9em}
   a{color:var(--ember)} a:hover{color:var(--amber)}
-  .addr{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 20px;display:inline-block}
+  .addr{background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--ember);border-radius:14px;padding:18px 22px;display:inline-block;line-height:1.7;margin-top:6px}
   .muted{color:var(--dim)}
-  footer{border-top:1px solid var(--line);margin-top:3em;padding:22px 0 50px;color:var(--dim);font-size:.85rem;display:flex;gap:18px;flex-wrap:wrap}
-  footer a{color:var(--dim)} footer a:hover{color:var(--ember)}
+  footer{border-top:1px solid var(--line);margin-top:4em;padding:24px 0 56px;color:var(--dim);font-size:.85rem;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--dim);text-decoration:none} footer a:hover{color:var(--ember)}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="/">BSK <span>RECORDS</span></a></div></header>
+<header><div class="wrap"><a href="/" aria-label="BSK Records – Startseite"><picture><source srcset="images/bsk-logo-160.webp" type="image/webp"><img src="images/bsk-logo-160.png" width="160" height="85" alt=""></picture></a><a class="back" href="/">← Zur Startseite</a></div></header>
 <main class="wrap">
+  <div class="kick">Rechtliches</div>
   <h1>Impressum</h1>
   <p class="muted">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz, vormals § 5 TMG)</p>
 
   <div class="addr">
+    <strong>BSK Records</strong><br>
     Mehmet Ince<br>
     Maximilianstraße 8<br>
     68165 Mannheim<br>
@@ -68,7 +78,7 @@
 <footer class="wrap">
   <a href="/">Startseite</a>
   <a href="/datenschutz.html">Datenschutz</a>
-  <span>© 2026 BSK Records — MEWARRIOR</span>
+  <span>© 2026 BSK Records — MEWARRIOR · KI‑produziert · AI‑generated</span>
 </footer>
 </body>
 </html>
